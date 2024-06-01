@@ -22,5 +22,6 @@ jobs:
         user: ${{secrets.SSH_USER}}
         private_key: ${{secrets.SSH_PRIVATE_KEY}}
         command: |
-          pwd
-          echo "F!@"
+          pwd;
+          echo "F!@";
+          lscpu;
