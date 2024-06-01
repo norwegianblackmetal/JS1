@@ -13,5 +13,5 @@ jobs:
       with:
         target-server: ${{ secrets.ftp_server }}
         remote-user: ${{ secrets.ftp_username }}
-        private-ssh-key: ${{ secrets.ftp_ssh_key }}
+        private-ssh-key: ${{ secrets.SFTP_KEY }}
         destination-path: www
