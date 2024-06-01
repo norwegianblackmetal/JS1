@@ -9,9 +9,9 @@ jobs:
       uses: actions/checkout@v4
     
     - name: 📂 Sync files
-      uses: SamKirkland/web-deploy@v1
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        target-server: ${{ vars.FTP_SERVER }}
-        remote-user: ${{ vars.FTP_USERNAME }}
-        private-ssh-key: ${{ secrets.SFTP_KEY }}
+        server: ${{ vars.FTP_SERVER }}
+        username: ${{ vars.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
         destination-path: /var/sftp/www/
