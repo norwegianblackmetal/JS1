@@ -14,4 +14,4 @@ jobs:
         server: ${{ vars.FTP_SERVER }}
         username: ${{ vars.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        destination-path: /var/sftp/www/
+        destination-path: /var/sftp/pub/
