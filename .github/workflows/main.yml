@@ -12,6 +12,15 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ vars.FTP_SERVER }}
-        username: ${{ vars.FTP_USERNAME }}
+        username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: pub/
+    - name: 🚀 Run app!
+      uses: D3rHase/ssh-command-action@v0.2.2
+      with:
+        host: ${{ vars.FTP_SERVER }}
+        user: ${{secrets.SSH_USER}}
+        private_key: ${{secrets.SSH_PRIVATE_KEY}}
+        command: |
+          pwd
+          echo "F!@"
