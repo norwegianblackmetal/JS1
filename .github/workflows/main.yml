@@ -14,4 +14,4 @@ jobs:
         target-server: ${{ vars.FTP_SERVER }}
         remote-user: ${{ vars.FTP_USERNAME }}
         private-ssh-key: ${{ secrets.SFTP_KEY }}
-        destination-path: www
+        destination-path: /var/sftp/www/
