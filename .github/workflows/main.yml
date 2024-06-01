@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/web-deploy@v1
       with:
-        target-server: $FTP_SERVER
-        remote-user: $FTP_USERNAME
+        target-server: ${{ vars.FTP_SERVER }}
+        remote-user: ${{ vars.FTP_USERNAME }}
         private-ssh-key: ${{ secrets.SFTP_KEY }}
         destination-path: www
